@@ -1,0 +1,7 @@
+pygsheets
+pandas
+python-dotenv
+requests
+discord.py
+schedule
+pytz

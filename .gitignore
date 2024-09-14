@@ -1,0 +1,7 @@
+myenv/*
+.env
+sheet_key.json
+sheets.py
+__pycache__
+script_archived.py
+cur_row.conf
