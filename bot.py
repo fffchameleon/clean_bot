@@ -29,13 +29,13 @@ class CleanerCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-    @tasks.loop(hours=96)
+    @tasks.loop(hours=168)
     async def weekly_check(self):
         try:
             channel = self.bot.get_channel(CHANNEL_ID)
             if channel:
                 date, sweep, mop = get_cleaner()
-                await channel.send(f"Date: {date}\n掃地+倒垃圾: {sweep}\n拖地+整理大桌子: {mop}")
+                await channel.send(f"Date: {date}\n🧹掃地+倒垃圾: {sweep}\n🧺拖地+整理大桌子: {mop}")
                 print("Finished sending message")
         except Exception as e:
             logging.error(f"Error in weekly_check: {e}")
